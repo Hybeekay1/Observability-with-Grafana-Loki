@@ -15,16 +15,17 @@ To set up Terraform, you'll need to follow a series of steps to install the Terr
 
 ## Steps
 
-└── Observability-with-Grafana-Loki
-    ├── README.md
-    ├── manifest_file
-    │   └── deployment.yaml
-    └── terraform_file
-        ├── main.tf
-        ├── terraform.tfstate
-        ├── terraform.tfstate.backup
-        └── values
-            └── values.yaml
+- Observability-with-Grafana-Loki
+  - [README.md](README.md)
+  - manifest_file
+    - [deployment.yaml](manifest_file/deployment.yaml)
+  - terraform_file
+    - [main.tf](terraform_file/main.tf)
+    - [terraform.tfstate](terraform_file/terraform.tfstate)
+    - [terraform.tfstate.backup](terraform_file/terraform.tfstate.backup)
+    - values
+      - [values.yaml](terraform_file/values/values.yaml)
+ 
 
-1. add the Grafana repo
-         helm repo add grafana https://grafana.github.io/helm-charts
+#### add the Grafana repo
+      helm repo add grafana https://grafana.github.io/helm-charts
