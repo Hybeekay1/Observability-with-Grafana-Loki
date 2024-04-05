@@ -1,0 +1,40 @@
+kind: Pod
+apiVersion: v1
+metadata:
+  name: nginx-app
+  labels:
+    app: app
+spec:
+  containers:
+    - name: nginx-app
+      image: 'nginx'
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: app-service
+spec:
+  selector:
+    app: app
+  ports:
+    - port: 80
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-full
+spec:
+  rules:
+  - host:
+    http:
+        paths:
+          - pathType: Prefix
+            path: /
+            backend:
+              service:
+                name: app-service
+                port:
+                  number: 80
+          
+---
+
