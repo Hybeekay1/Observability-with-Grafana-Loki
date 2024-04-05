@@ -13,4 +13,18 @@ Setting up Kubernetes using Minikube is a straightforward process. Minikube is a
 
 To set up Terraform, you'll need to follow a series of steps to install the Terraform CLI and initialize your Terraform project. Here's a [guide](https://developer.hashicorp.com/terraform/install) to help you get started
 
+## Steps
 
+└── Observability-with-Grafana-Loki
+    ├── README.md
+    ├── manifest_file
+    │   └── deployment.yaml
+    └── terraform_file
+        ├── main.tf
+        ├── terraform.tfstate
+        ├── terraform.tfstate.backup
+        └── values
+            └── values.yaml
+
+1. add the Grafana repo
+         helm repo add grafana https://grafana.github.io/helm-charts
