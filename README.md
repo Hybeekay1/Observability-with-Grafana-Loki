@@ -242,7 +242,7 @@ To set up Terraform, you'll need to follow a series of steps to install the Terr
 #### build the infrasture
       terraform apply --auto-approve
 
-#### check all deployment 
+#### check all deployment in app namespace
       kubectl get all -n app
 #### output
       NAME                         READY   STATUS    RESTARTS        AGE
@@ -257,7 +257,7 @@ To set up Terraform, you'll need to follow a series of steps to install the Terr
       NAME                               DESIRED   CURRENT   READY   AGE
       replicaset.apps/nginx-665fdd4b55   1         1         1       40h
 
-
+#### check all deployment in observability namespace
       kubectl get all -n observability 
 #### output
       NAME                                READY   STATUS    RESTARTS   AGE
@@ -342,3 +342,6 @@ To get ingress to work you’ll need to open a new terminal window and run minik
 
 #### grafana interface 
 <img src="images/Screenshot 2023-10-17 134353.png" alt="Alt text">
+
+#### to destroy the whole infrastructure
+      terraform destroy --auto-approve
