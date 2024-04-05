@@ -1,5 +1,5 @@
 # Observability-with-Grafana-Loki
-## prerequisite 
+# prerequisite 
 
 # Setting up Kubernetes using Minikube
 
@@ -303,10 +303,10 @@ To set up Terraform, you'll need to follow a series of steps to install the Terr
 
 
 #### Note for Docker Desktop Users:
-To get ingress to work you’ll need to open a new terminal window and run minikube tunnel and in the following step use 127.0.0.1 in place of <ip_from_above>.
+To get ingress to work you’ll need to open a new terminal window and run minikube tunnel and in the following step use 127.0.0.1 in place of <ip_from_above>. [source](https://minikube.sigs.k8s.io/docs/start/)
 
 #### nginx interface 
-<img src="images/Screenshot 2023-10-17 134353.png" alt="Alt text">
+<img src="images/Screenshot 2024-04-05 113202.png" alt="Alt text">
 
 #### decode the grafana secret and login
       ~$ kubectl get secret -n observability
@@ -341,7 +341,7 @@ To get ingress to work you’ll need to open a new terminal window and run minik
       q1emLzdrV2mu6YLs7If5EwZvXGkdG4yuuIpTeiYa
 
 #### grafana interface 
-<img src="images/Screenshot 2023-10-17 134353.png" alt="Alt text">
+<img src="images/Screenshot 2024-04-05 112516.png" alt="Alt text">
 
 #### to destroy the whole infrastructure
       terraform destroy --auto-approve
